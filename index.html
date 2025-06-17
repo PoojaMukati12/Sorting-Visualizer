@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting-Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--  Intro by  animation work  -->
+    <div id="intro_by_animation">
+        <h1 id="project_name">Sorting Visualizer</h1>
+        <p id="subtitle">An Interactive Sorting Experience</p>
+    </div>
+    <!-- main Project Content -->
+     <div class="main">
+            <div class="part1_mainHeading">
+                    <h1 class="project_name">Sorting Visualizer</h1>
+            </div>
+            <div class="part2_working">
+                  <!-- section-1 -->
+                    <div class="section1_optionArea">
+                        <h2 class="sort" id="bubbleSortAlgo">Bubble Sort</h2>
+                        <h2 class="sort" id="selectionSortAlgo">Selection Sort</h2>
+                        <h2 class="sort" id="insertionSortAlgo">Insertion Sort</h2>
+                        <div class="array">
+                            <h3>Array:</h3>
+                            <h3 id="elements">5, 3, 6, 1, 10, 8, 9, 4, 7, 2</h3>
+                        </div>
+                        <div class="slidecontainer">
+                             <input type="range" min="50" max="1000" value="400" class="slider" id="myRange">
+                        </div>
+                    </div>
+                   <!-- section-2 -->
+                    <div class="section2_sortingArea">
+                        <div id="sortingArea">
+                
+                        </div>
+                        <div class="msgArea">
+                                 <h4 id="msg" style="color: blue;">Select your sorting algorithm...</h4>
+                        </div>
+                        <div class="startArea">
+                            <div id="reset">Reset</div>    
+                        </div>
+                    </div>
+              </div>           
+     </div>
+      
+    <script  src="script.js"></script>
+     <script src="bubbleSortAlgo.js"></script>
+     <script src="insertionSortAlgo.js"></script>
+     <script src="selectionSortAlgo.js"></script>
+</body>
+</html>

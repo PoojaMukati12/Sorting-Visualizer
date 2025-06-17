@@ -1,0 +1,397 @@
+
+*{
+    font-family: sans-serif,'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#intro_by_animation{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #001f3f;
+    /* background-color: rgb(20, 20, 21); */
+    
+     /* color: blue; */
+     color: #FDF5E6;
+     /* small animation work for intro also */
+     animation: ease-out forwards;
+}
+#project_name{
+    font-size: 5.2vmax;
+    opacity: 0;
+    transform: translateY(-5px);      
+    /* animation work */
+    animation-name: moveInDown;
+    animation-duration: 2s;              /*it define how long animation take to complete, NOTE: if it is not specified, no animation will occur, because default value is 0s*/
+    /* animation-delay: ; 0s              specified delay for start of an animation, but here i didn't want; i want delay dor subtitle only  */
+    animation-timing-function: ease-out;     /*animation with slow end*/  /*ease-in, ease-in-out...*/
+    animation-fill-mode: forwards;         /*The element will retain the style values that is set by the last keyframe; NOTE: animation do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behaviour, this property specify a style for target element when animation is not playing (none, forward, backward, both)  */
+    /*shorthand animation property*/
+    /* animation: moveInDown 2s ease-out 0s forwards */
+}
+#subtitle{
+    font-size: 1.8vmax;
+    opacity: 0;
+    transform: translateY(35px);
+     /* animation work */
+    animation-name: moveInUp;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* shorthand animation property */
+    animation: moveInUp 2s ease-out 1s forwards;
+}
+/* CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times. */
+@keyframes moveInDown{                       /* inDown is animation name*/ 
+    /*  from, to OR 0%(start) 100%(complete)   , we can also write 0%, 25%, 50%, 100% */
+    0%{   
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+}
+@keyframes moveInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(37px);
+    }
+}
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    opacity: 0;      /*for animation*/
+    display: none;
+    transition: opacity 1s ease-in;
+}
+
+.part1_mainHeading{
+    width: 100%;
+    height: 8.5%;
+    text-align: center;
+    background-color: rgb(245, 137, 74);
+    /* background-color:rgb(190 114 70); */
+    padding: 3px;
+    border-bottom:solid black 2px;
+}
+h1{
+    font-size: 42px;
+    letter-spacing: 5.3px;
+    word-spacing: 1.5px;
+    font-weight: bold;
+}
+.part2_working{
+    background-color: red;
+    width: 100%;
+    height: 91.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.section1_optionArea{
+    min-width: 30%;
+    min-height: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+    gap: 10vh;
+    border-right: solid rgb(122, 119, 119) 1.5px;
+}
+h2{
+    font-size: 30px;
+    letter-spacing: 1.9px;
+    cursor: pointer;
+}
+.array{
+    line-height: 35px;
+}
+h3{
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+#elements{
+    font-size: 22px;
+    letter-spacing: 1px;
+    /* color: rgb(10, 100, 19); */
+    color:#f01010cb;
+}
+#myRange{
+    height: 5px;
+    width: 103px;
+}
+input[type="range"] {
+    direction: rtl;     /* (right to left) i change the input direction of rangebecause when we decrease the range(speed) actual swaping speed is increses*/
+}
+.section2_sortingArea{
+    min-width: 70%;
+    height: 100%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#sortingArea{
+    width: 100%;
+    height: 84%;
+    background-color: rgb(238 201 174);
+    display: flex;
+    /* display: ; */
+    flex-direction:row;
+    justify-content: center;
+    align-items: flex-end;      /* to flip the bar*/
+    padding: 20px;
+    padding-bottom: 50px;
+    border-bottom: solid rgb(120, 114, 114) 1px;
+}
+.bar{
+    margin: 0px 4px;
+    transition: transform 0.5s ease, height 0.5s ease, background-color 0.5s
+}
+.msgArea{
+    height: 6%;
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid rgb(120, 114, 114) 1px;
+}
+#msg{
+    font-size: 23px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+    
+.startArea{
+    height: 10%;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: peachpuff;
+}
+
+#reset.disabled{
+    background: grey;
+    cursor: not-allowed;
+    pointer-events:none;
+    color: black;
+    border: 2px solid black;
+}
+
+#reset{
+    font-size: 20px;
+    font-weight: 550;
+    padding: 4px;
+    width: 80px;
+    text-align: center;
+    height: 33px;
+    background-color: transparent;
+    color:#047af9;
+    border: 2.2px solid #007bff;
+    border-radius: 6px;
+    letter-spacing: 0.66px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    
+    #subtitle{
+        font-size: 2.4vmax;
+    }
+
+    h1{
+        font-size: 25.5px;
+        letter-spacing: 2.5px;
+        word-spacing: -2px;
+    }
+    h2{
+        font-size: 21px;
+        letter-spacing: 1.7px;
+    }
+    h3{
+        font-size: 15.8px;
+        letter-spacing: 1.5px;
+    }
+    .array{
+        margin-top: 4px;
+        line-height: 17.5px;
+    }
+    #elements{
+        font-size: 16px;
+        letter-spacing: 1.2px;
+    }
+    #myRange{
+        height: 3.2px;
+        width: 95px;
+    }
+    .part1_mainHeading{
+        height: 6%;
+    }
+    .part2_working{
+        height: 94%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section1_optionArea{
+        gap: 1.5vh;
+        padding-top: 11px;
+        min-height: 32%; 
+        min-width: 100%;
+        border-bottom:  solid rgb(106, 103, 103) 1.5px;
+    }
+    .section2_sortingArea{
+        min-height: 68%;
+        min-width: 100%;
+    }
+    #sortingArea{
+        padding: 6px;
+        height: 86%;
+    }
+    .msgArea{
+        height: 6%;
+        width: 100%;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: solid rgb(120, 114, 114) 1px;
+    }
+    #msg{
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        word-spacing: 0.3px;
+    }
+    .startArea{
+        height: 8%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: peachpuff;
+    }
+    #reset{
+        padding: 0.01px;
+        font-size: 16px;
+        width: 66px;
+        text-align: center;
+        height: 22px;
+        border-radius: 4px;
+        letter-spacing: 0.6px;
+        cursor: pointer;
+    }
+    .bar{
+        margin: 0px 2px;
+    }
+
+}
+
+@media (max-height: 600px){
+
+    #subtitle{
+        font-size: 2.4vmax;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+    }
+    .part1_mainHeading{
+        width: 100%;
+        height: 15vh;
+        padding: 2px;
+    }
+    h1{
+        font-size: 10vh;
+        letter-spacing: 0.5vw;
+    }
+    .part2_working{
+        width: 100%;
+        height: 85vh;
+    }
+    .section1_optionArea{
+        min-width: 35%;
+        min-height: 150%;
+        padding-top: 8vw;
+        gap: 5.5vw;
+        border-right: solid rgb(122, 119, 119) 1.5px;
+    }
+    h2{
+        font-size: 3.8vw;
+        letter-spacing: 1.9px;
+    }
+    .array{
+        line-height: 3vw;
+    }
+    h3{
+        font-size: 2.6vw;
+        letter-spacing: 1.5px;
+    }
+    #elements{
+        font-size: 2.7vw;
+        letter-spacing: 0.1vw;
+    }
+    #myRange{
+        height: 4px;
+        width: 100px;
+    }
+    .section2_sortingArea{
+        min-width: 65%;
+        height: 150%;
+    }
+    #sortingArea{
+        width: 100%;
+        height: 82%;
+        padding: 20px;
+        padding-bottom: 10px;
+        border-bottom: solid rgb(120, 114, 114) 1px;
+    }
+    .msgArea{
+        height: 8%;
+        width: 100%;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: solid rgb(120, 114, 114) 1px;
+    }
+    #msg{
+        font-size: 3vw;
+        letter-spacing: 0.9px;
+        word-spacing: 1px;
+    }
+    .startArea{
+        height: 10%;
+        width: 100%;
+        padding: 2px;
+    }
+
+    #reset{
+        font-size: 2.6vw;
+        padding: 0.2vw;
+        width: 10vw;
+        height: 4vw;
+    }
+}
