@@ -46,9 +46,7 @@
 ## 🌐 Check out the live version of the project [here](https://poojamukati12.github.io/Sorting-Visualizer/)
 
 ### 💻 Landscape view :
-![image]()
-
-
+![image](https://github.com/PoojaMukati12/Sorting-Visualizer/blob/fdb98f3e22b053c5415c255ae518cb82491eba29/Screenshot%20(394).png)
 
 ### 📱 Portrait view : 
 
