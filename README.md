@@ -43,7 +43,7 @@
 
 ## 🚀 Live Demo
 
-## 🌐 Check out the live version of the project [here](https://nidhibhamoriya.github.io/Sorting-Visualizer/)
+## 🌐 Check out the live version of the project [here](https://poojamukati12.github.io/Sorting-Visualizer/)
 
 ### 💻 Landscape view :
 
